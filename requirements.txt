@@ -3,4 +3,3 @@ Flask-SQLAlchemy==2.5.1
 SQLAlchemy==1.4.22
 requests==2.25.1
 gunicorn==20.1.0
-datatables.net==1.10.21
