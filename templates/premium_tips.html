@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Premium Tips</h2>
+<p>Welcome to the Premium Tips section. Here you can access premium betting tips.</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Match Name</th>
+            <th>Match Time</th>
+            <th>Prediction</th>
+            <th>Odds</th>
+            <th>Result</th>
+            <th>Feedback</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{ prediction[1] }}</td>
+            <td>{{ prediction[2] }}</td>
+            <td>{{ prediction[3] }}</td>
+            <td>{{ prediction[4] }}</td>
+            <td>{{ prediction[5] }}</td>
+            <td>{{ prediction[6] if prediction[6] else 'No feedback' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

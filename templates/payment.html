@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Payment Details</h2>
+<p>To access the Neural Bets section, please make a payment using the following details:</p>
+<p>UPI ID: your_upi_id@bank</p>
+<p>Amount: ₹500</p>
+<form method="POST" action="{{ url_for('process_payment') }}">
+    <div class="form-group">
+        <label for="utr_number">UTR Number</label>
+        <input type="text" class="form-control" id="utr_number" name="utr_number" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Payment</button>
+</form>
+{% endblock %}
+
+

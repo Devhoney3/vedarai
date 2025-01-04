@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Winning Stats</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="total_wins">Total Wins</label>
+        <input type="number" class="form-control" id="total_wins" name="total_wins" value="{{ stats[1] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="total_losses">Total Losses</label>
+        <input type="number" class="form-control" id="total_losses" name="total_losses" value="{{ stats[2] }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Stats</button>
+</form>
+{% endblock %}
+

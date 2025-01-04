@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>View Predictions</h2>
+<h3>Total Wins: {{ total_wins }}</h3>
+<h3>Total Losses: {{ total_losses }}</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Match Name</th>
+            <th>Match Time</th>
+            <th>Prediction</th>
+            <th>Odds</th>
+            <th>Result</th>
+            <th>Feedback</th>
+            {% if session['role'] == 'admin' %}
+            <th>Actions</th>
+            {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{ prediction[1] }}</td>
+            <td>{{ prediction[2] }}</td>
+            <td>{{ prediction[3] }}</td>
+            <td>{{ prediction[4] }}</td>
+            <td>{{ prediction[5] }}</td>
+            <td>{{ prediction[6] if prediction[6] else 'No feedback' }}</td>
+            {% if session['role'] == 'admin' %}
+            <td>
+                <a href="{{ url_for('update_prediction', prediction_id=prediction[0]) }}" class="btn btn-warning">Update</a>
+            </td>
+            {% elif session['role'] == 'user' %}
+            <td>
+                <a href="{{ url_for('add_feedback', prediction_id=prediction[0]) }}" class="btn btn-info">Add Feedback</a>
+            </td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

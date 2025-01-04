@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Approve Payment</h2>
+<p>User: {{ user[1] }}</p>
+<p>UTR Number: {{ user[6] }}</p>
+<form method="POST" action="{{ url_for('approve_payment', user_id=user[0]) }}">
+    <button type="submit" class="btn btn-primary">Approve Payment</button>
+</form>
+{% endblock %}
+}

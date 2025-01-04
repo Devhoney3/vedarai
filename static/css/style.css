@@ -1,0 +1,69 @@
+/* Add your custom styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #00203FFF; /* Dark navy blue */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #FFFFFF; /* White text */
+}
+
+.nav-link {
+    color: #FFFFFF; /* White text */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.jumbotron {
+    background-color: #2E582C; /* Dark slaked green */
+    color: #FFFFFF; /* White text */
+    animation: fadeIn 2s;
+}
+
+.stats-section {
+    background-color: #00203FFF; /* Dark navy blue */
+    color: #FFFFFF; /* White text */
+    padding: 20px;
+    margin-top: 20px;
+    animation: slideIn 2s;
+}
+
+.blog-section {
+    background-color: #f0f0f0; /* Light gray */
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+.blog-post {
+    background-color: #FFFFFF; /* White background */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    animation: slideIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

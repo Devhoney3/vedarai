@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Update Prediction</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="match_name">Match Name</label>
+        <input type="text" class="form-control" id="match_name" name="match_name" value="{{ prediction[1] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="match_time">Match Time</label>
+        <input type="text" class="form-control" id="match_time" name="match_time" value="{{ prediction[2] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="prediction">Prediction</label>
+        <input type="text" class="form-control" id="prediction" name="prediction" value="{{ prediction[3] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="odds">Odds</label>
+        <input type="number" class="form-control" id="odds" name="odds" step="0.01" value="{{ prediction[4] }}" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="result">Result</label>
+        <select class="form-control" id="result" name="result">
+            <option value="win" {% if prediction[5] == 'win' %}selected{% endif %}>Win</option>
+            <option value="loss" {% if prediction[5] == 'loss' %}selected{% endif %}>Loss</option>
+            <option value="pending" {% if prediction[5] == 'pending' %}selected{% endif %}>Pending</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Prediction</button>
+</form>
+{% endblock %}
