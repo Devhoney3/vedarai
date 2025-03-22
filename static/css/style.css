@@ -1,69 +1,107 @@
-/* Add your custom styles here */
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+    background-color: #f8f9fa; /* Light gray for a clean look */
+    margin: 0;
+    padding: 0;
 }
 
+/* Navbar Styling */
 .navbar {
-    background-color: #00203FFF; /* Dark navy blue */
+    background-color: #1E293B; /* Dark blue-gray for a sleek look */
+    padding: 10px 20px;
 }
 
 .navbar-brand {
     font-weight: bold;
-    color: #FFFFFF; /* White text */
+    color: #E5E7EB; /* Light gray text for contrast */
+    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 .nav-link {
-    color: #FFFFFF; /* White text */
+    color: #E5E7EB; /* Light gray text */
+    text-decoration: none;
+    margin-right: 15px;
 }
 
+.nav-link:hover {
+    color: #38BDF8; /* Light blue hover effect */
+}
+
+/* Container Styling */
 .container {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
+/* Jumbotron Styling */
 .jumbotron {
-    background-color: #2E582C; /* Dark slaked green */
-    color: #FFFFFF; /* White text */
-    animation: fadeIn 2s;
+    background-color: #2563EB; /* Vibrant blue for a welcoming section */
+    color: #FFFFFF; /* White text for readability */
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Stats Section Styling */
 .stats-section {
-    background-color: #00203FFF; /* Dark navy blue */
-    color: #FFFFFF; /* White text */
-    padding: 20px;
+    background-color: #1E293B; /* Dark blue-gray for contrast */
+    color: #F3F4F6; /* Off-white text */
+    padding: 30px;
+    border-radius: 10px;
     margin-top: 20px;
-    animation: slideIn 2s;
+    animation: slideIn 1.5s ease-in-out;
 }
 
+/* Blog Section Styling */
 .blog-section {
-    background-color: #f0f0f0; /* Light gray */
-    padding: 20px;
+    background-color: #F8FAFC; /* Subtle light gray */
+    padding: 30px;
     margin-top: 20px;
-    animation: fadeIn 2s;
+    border-radius: 10px;
 }
 
 .blog-post {
-    background-color: #FFFFFF; /* White background */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    animation: slideIn 2s;
+    background-color: #FFFFFF; /* Clean white background */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @keyframes slideIn {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
+        opacity: 0;
     }
     to {
         transform: translateX(0);
+        opacity: 1;
     }
+}
+
+/* Buttons (Optional) */
+button {
+    background-color: #2563EB; /* Vibrant blue button */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1E40AF; /* Darker blue on hover */
 }
